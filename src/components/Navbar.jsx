@@ -7,6 +7,7 @@ import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Register from "./Register";
+import Search from "./Search";
 
 const navSubItems = [
   { title: "Смесители", path: "/" },
@@ -19,6 +20,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+
+  const handleSearchClick = () => {
+    setShowSearch(!showSearch);
+  };
 
   const handleRegisterClick = () => {
     setShowRegister(!showRegister);
@@ -73,9 +79,13 @@ const Navbar = () => {
             <Register isOpen={showRegister} onClose={handleRegisterClick} />
 
             {/* search */}
-            <div className="border p-3 rounded text-gray">
+            <div
+              onClick={handleSearchClick}
+              className="border p-3 rounded text-gray"
+            >
               <FaSearch className="text-gray md:text-[#EC7133] h-5 w-5 hover:text-white" />
             </div>
+            <Search isOpen={showSearch} onClose={handleSearchClick} />
           </div>
           {/* mobile menu */}
           <div className="flex gap-3 p-2 border rounded text-gray md:hidden">
