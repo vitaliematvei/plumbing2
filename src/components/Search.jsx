@@ -6,7 +6,6 @@ const Search = ({ isOpen }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   const handleInputChange = (event) => {
-    console.log(event);
     const searchQuery = event.target.value.toLowerCase();
     setSearchTerm(searchQuery);
 
@@ -42,12 +41,7 @@ const Search = ({ isOpen }) => {
           </div>
         </div>
 
-        {/* <input
-          type="text"
-          value={searchTerm}
-          onChange={handleInputChange}
-          className="border-2 rounded-md border-orange"
-        /> */}
+        {/* De modificat */}
         {filteredData.length > 0 && (
           <ul className="border bg-green-900">
             {filteredData.map((item) => (

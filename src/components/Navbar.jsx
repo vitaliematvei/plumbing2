@@ -3,7 +3,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { BiUser } from "react-icons/bi";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../assets/Logo.svg";
+import logo from "../assets/images/Logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Register from "./Register";
@@ -45,14 +45,14 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="max-w-screen-2xl bg-dark-green mx-auto">
+    <header className="z-50 max-w-screen-2xl bg-dark-green mx-auto">
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center md:py-4 py-3 px-4">
         {/* logo and txt*/}
         <div className="flex items-center gap-4">
           <a href="/">
             <img src={logo} alt="logo" />
           </a>
-          <p className="text-gray lg:text-lg font-ptSans hidden md:block">
+          <p className="text-gray lg:text-lg font-ptSans hidden md:block ">
             Разработано в Германии. Сделано в России.
           </p>
         </div>
@@ -65,14 +65,14 @@ const Navbar = () => {
               <p>+7 (905) 543 23 45</p>
             </div>
             {/* shopping cart */}
-            <div className="flex gap-2 border rounded border-gray p-2">
+            <div className="flex gap-2 border rounded border-gray p-[9px] hidden lg:flex ">
               <RiShoppingCartLine className="text-orange md:text-[#EC7133] h-6 w-6 hover:text-white" />
               <p className="text-white font-lg">4 290 ₽</p>
             </div>
             {/* user */}
             <div
               onClick={handleRegisterClick}
-              className="border rounded border-gray p-2"
+              className="border rounded border-gray p-2 hidden lg:block "
             >
               <BiUser className="text-orange md:text-[#EC7133] h-6 w-6 hover:text-white" />
             </div>
@@ -81,14 +81,14 @@ const Navbar = () => {
             {/* search */}
             <div
               onClick={handleSearchClick}
-              className="border p-3 rounded text-gray"
+              className="border p-[10px] rounded text-gray"
             >
               <FaSearch className="text-gray md:text-[#EC7133] h-5 w-5 hover:text-white" />
             </div>
             <Search isOpen={showSearch} onClose={handleSearchClick} />
           </div>
           {/* mobile menu */}
-          <div className="flex gap-3 p-2 border rounded text-gray md:hidden">
+          <div className="flex gap-3 p-[6px] border rounded text-gray md:hidden">
             <button onClick={toggleMenu}>
               {isMenuOpen ? (
                 <FaTimes className="w-7 h-7 text-white" />

@@ -38,7 +38,7 @@ function Login({ isOpen }) {
         </div>
         <button
           type="submit"
-          className="bg-sky-600 items-center w-40 mt-6 mb-2 rounded-full bg-white text-white font-bold text-2xl p-2 pb-"
+          className="bg-sky-500 items-center w-40 mt-6 mb-2 rounded-full bg-white text-white font-bold text-2xl p-2 pb-"
         >
           Login
         </button>

@@ -7,6 +7,7 @@ export default {
         "dark-green": "#282929",
         "white-smoke": "#F6F6F6",
         "dark-gray": "#383838",
+        "ashy-gray": "#575757",
         orange: "#EC7133",
         gray: "#939393",
         "light-gray": "#BEBEBE",
